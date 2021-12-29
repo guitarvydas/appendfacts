@@ -1,0 +1,5 @@
+Main [@sharp kdisplay @line] = [[${sharp} ${kdisplay}${line}]]
+line [@notNL nl] = [[${notNL}${nl}]]
+nl [c] = [[${c}]]
+notNL [c] = [[${c}]]
+sharp [c] = [[${c}]]

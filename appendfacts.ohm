@@ -1,0 +1,7 @@
+appendfacts {
+  Main = sharp+ "display" #(line)+
+  line = notNL* nl
+  nl = "\n"
+  notNL = ~nl any
+  sharp = "#"
+}
