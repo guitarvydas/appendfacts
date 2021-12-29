@@ -1,6 +1,7 @@
 appendfacts {
-  Main = sharp+ "display" #(line)+
+  Main = sharp+ "display" #(commentline) #(line)+
   line = notNL* nl
+  commentline = line
   nl = "\n"
   notNL = ~nl any
   sharp = "#"

@@ -1,5 +1,15 @@
-Main [@sharp kdisplay @line] = [[${sharp} ${kdisplay}${line}]]
-line [@notNL nl] = [[${notNL}${nl}]]
+Main [@sharp kdisplay commentline @line]
+  = [[#!/usr/bin/env node
+const fs = require ('fs');
+var rawText = fs.readFileSync ('/dev/fd/0');
+var parameters = JSON.parse(rawText);
+parameters.forEach (p => {
+  var ID = p [0];
+var Name = p [1];
+${line}
+});]]
+line [@notNL nl] = [[console.log (\`${support.trimnl (notNL)}\`);\n]]
+commentline [line] = [[${line}]]
 nl [c] = [[${c}]]
 notNL [c] = [[${c}]]
 sharp [c] = [[${c}]]
