@@ -7,7 +7,10 @@ parameters.forEach (p => {
   var ID = p [0];
 var Name = p [1];
 ${line}
-});]]
+});
+let fb = fs.readFileSync ("fb.pl", "utf-8");
+process.stdout.write (fb);
+]]
 line [@notNL nl] = [[console.log (\`${support.trimnl (notNL)}\`);\n]]
 commentline [line] = [[${line}]]
 nl [c] = [[${c}]]

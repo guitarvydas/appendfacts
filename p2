@@ -8,3 +8,6 @@ var Name = p [1];
 console.log (`    das_fact(name, ${ID}, \"${Name}\").`);
 
 });
+let fb = fs.readFileSync ("fb.pl", "utf-8");
+process.stdout.write (fb);
+
